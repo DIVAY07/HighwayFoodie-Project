@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate')%>
 <div class="row">
-    <h1 class="text-center">New Campground</h1>
+    <h1 class="text-center">New Restaurant</h1>
     <div class="col-md-6 offset-md-3">
         <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
@@ -18,6 +18,22 @@
                 </div>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label" for="address">Full Address</label>
+                <input class="form-control" type="text" id="address" name="campground[address]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="mobile">Phone No.</label>
+                <input class="form-control" type="text" id="mobile" name="campground[mobile]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
             <!-- <div class="mb-3">
                 <label class="form-label" for="image">Image Url</label>
                 <input class="form-control" type="text" id="image" name="campground[image]" required>
@@ -26,9 +42,9 @@
                 </div>
             </div> -->
             <div class="mb-3">
-                <label class="form-label" for="price">Campground Price</label>
+                <label class="form-label" for="price">Avg.Price for 2 people</label>
                 <div class="input-group">
-                    <span class="input-group-text" id="price-label">$</span>
+                    <span class="input-group-text" id="price-label">Rs.</span>
                     <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
                         aria-describedby="price-label" name="campground[price]" required>
                 </div>
@@ -55,9 +71,9 @@
                 </div>
             </div>
             <div class="mb-3">
-                <button class="btn btn-success">Add Campground</button>
+                <button class="btn btn-success">Add Restaurant</button>
             </div>
         </form>
-        <a href="/campgrounds">All Campgrounds</a>
+        <a href="/campgrounds">All Restaurants</a>
     </div>
 </div>
