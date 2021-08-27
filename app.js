@@ -2,6 +2,8 @@ if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
 
+// mongodb+srv://divay:divay@cluster0.utahy.mongodb.net/new-one?retryWrites=true&w=majority
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -21,7 +23,7 @@ const reviewRoutes = require('./routes/reviews');
 
 const MongoDBStore = require("connect-mongo")(session);
 
-const dbUrl =  'mongodb://localhost:27017/new-one';
+const dbUrl =  process.env.DB_URL || 'mongodb://localhost:27017/new-one';
 
 //localhost:27017/yelp-camp';
 
