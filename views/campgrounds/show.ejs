@@ -33,7 +33,7 @@
                 <li class="list-group-item text-muted"><%= campground.address%></li>
                 <li class="list-group-item"><%= campground.mobile%></li>
                 <li class="list-group-item">Submitted by <%= campground.author.username%></li>
-                <li class="list-group-item">Rs.<%= campground.price%>/night</li>
+                <li class="list-group-item">Rs.<%= campground.price%> avg for 2 persons</li>
             </ul>
             <%  if( currentUser && campground.author.equals(currentUser._id))  {%>
             <div class="card-body">
