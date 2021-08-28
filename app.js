@@ -2,8 +2,6 @@ if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
 
-// mongodb+srv://divay:divay@cluster0.utahy.mongodb.net/new-one?retryWrites=true&w=majority
-
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -146,8 +144,8 @@ app.use((req, res, next) => {
 
 
 app.use('/', userRoutes);
-app.use('/campgrounds', campgroundRoutes)
-app.use('/campgrounds/:id/reviews', reviewRoutes)
+app.use('/Restaurants', campgroundRoutes)
+app.use('/Restaurants/:id/reviews', reviewRoutes)
 
 
 app.get('/', (req, res) => {
